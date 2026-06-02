@@ -1,0 +1,6 @@
+{
+  "name": "State of Awareness in God",
+  "description": "An interactive digital book, devotional, and reflection journal designed to foster positive thinking, guide spiritual growth in Jesus, explore Ephesians 6:12, and help readers transform negative habits that impact their lives and others.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

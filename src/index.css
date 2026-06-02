@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF5EC; /* Luxurious warm champagne background */
+  color: #2A2118; /* Rich espresso text */
+}
+
+/* 3D Gates & Clouds Animations */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.gate-left {
+  transform-origin: left center;
+  transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gate-right {
+  transform-origin: right center;
+  transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gate-open-left {
+  transform: rotateY(-130deg);
+}
+
+.gate-open-right {
+  transform: rotateY(130deg);
+}
+
+/* Animation for natural cloud drifting */
+@keyframes floatCloudLeft {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-15px) translateY(-5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes floatCloudRight {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(15px) translateY(5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes divineGlow {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(212, 175, 55, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 45px rgba(255, 255, 255, 1)) drop-shadow(0 0 75px rgba(212, 175, 55, 0.9)); }
+}
+
+.animate-float-left {
+  animation: floatCloudLeft 7s ease-in-out infinite;
+}
+
+.animate-float-right {
+  animation: floatCloudRight 8s ease-in-out infinite;
+}
+
+.divine-light {
+  animation: divineGlow 3.5s ease-in-out infinite;
+}
+
+/* Custom champagne premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #E6DBC6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CBB996;
+}
+
